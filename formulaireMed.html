@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Medecin</title>
+    <link rel="stylesheet" href="medstyle.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Founir les informations du Medecin:</h2>
+        <form action="addmed.php" method="post" class="personal-form">
+            <label for="id">identifiant:</label>
+            <input type="text" id="id" name="id" placeholder="id du Medecin" required><br><br>
+
+            <label for="Nom">Nom:</label>
+            <input type="text" id="nom" name="nom" placeholder="Nom du Medecin" required><br><br>
+
+            <label for="Prenom">Prenom:</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Prenom du Medecin" required><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="E-mail" required><br><br>
+
+
+            <label for="tel">Telephone:</label>
+            <input type="number" id="tel" name="tel" placeholder="Telephone" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

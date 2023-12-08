@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="formconn.css">
+</head>
+<body>
+    <form action="connuser.php" method="post">
+        <div>
+            <h1>Connexion</h1>
+            <label for="idlog">IDlog du Medecin</label>
+            <input type="text" name="idlog" id="idlog" placeholder="idlog du medecin">
+
+            <label for="identifiant">identifiant</label>
+            <input type="password" name="identifiant" id="identifiant" placeholder="Password">
+           <fieldset>
+            <legend>Entrer votre statut</legend>
+            <p><input type="radio" name="statut" value="Medecin" checked>Medecin</p>
+            <p><input type="radio" name="statut" value="administrateur" >Administrateur</p>
+           </fieldset>
+           <input type="submit" value="Connect">
+           
+        </div>
+    </form>
+</body>
+</html>
