@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="myTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>surname</th>
+            <th>tel</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <!-- <td>Jane</td>
+            <td>30</td>
+            <td>dan</td>
+            <td>Jane@example.com</td> -->
+
+        </tr>
+        <tr>
+            <!-- <td>foo</td>
+            <td>03</td>
+            <td>clair</td>
+            <td>foo@example.com</td> -->
+        </tr>
+        <tr>
+            <!-- <td>ron</td>
+            <td>93</td>
+            <td>young</td>
+            <td>ron@example.com <br> </td> -->
+        </tr>
+    </table>
+    <input type="submit">
+    <script>
+        // Declare a variable and assign the result of the query selector
+
+
+        const inp = document.querySelector('input');
+        inp.addEventListener("click", () => {
+
+            // var table = document.getElementById("myTable");
+
+            // // Loop through the rows
+            // for (var i = 1, row; row = table.rows[i]; i++) {
+            //     // Check the condition, for example, if the name is 'Jane'
+            //     if ((table.rows[0].cells[2].innerHTML === 'surname') && (row.cells[0].innerHTML === 'foo')) {
+            //         // Insert the new age value into the 'Age' column
+            //         row.cells[2].innerHTML = 'Ronald'; // Assuming you want to change Jane's age to 32
+            //         break; // Exit the loop if the condition is met
+            //     }
+            // }
+            // Extract data from the HTML table
+
+            // const data = [];
+
+            // // Iterate through the table rows and extract the data
+            // for (let i = 1; i < table.rows.length; i++) {
+            //     const row = table.rows[i];
+            //     const rowData = {
+            //         name: row.cells[0].innerHTML,
+            //         age: parseInt(row.cells[1].innerHTML), // Convert age to a number
+            //         surname: row.cells[2].innerHTML,
+            //         tel: row.cells[3].innerHTML
+            //     };
+            //     data.push(rowData);
+            // }
+
+            // // Convert extracted data to JSON
+            // const jsonData = JSON.stringify(data, null, 2); // Adding null and 2 for formatting
+
+            // // Create a JSON file and initiate the download
+            // const blob = new Blob([jsonData], { type: 'application/json' });
+            // const url = URL.createObjectURL(blob);
+            // const a = document.createElement('a');
+            // a.href = url;
+            // a.download = 'table-data.json';
+            // a.click();
+            // URL.revokeObjectURL(url);
+            // Assuming you have a JSON file with the following content:
+            // [
+            //   { "name": "John", "age": 25, "surname": "Doe", "tel": "john@example.com" },
+            //   { "name": "Jane", "age": 30, "surname": "dan", "tel": "Jane@example.com" },
+            //   { "name": "foo", "age": 3, "surname": "clair", "tel": "foo@example.com" },
+            //   { "name": "ron", "age": 93, "surname": "young", "tel": "ron@example.com" }
+            // ]
+
+            // Function to load JSON data into the table
+            function loadJSONDataIntoTable(jsonUrl, tableId) {
+                fetch(jsonUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const table = document.getElementById(tableId);
+
+                        data.forEach(item => {
+                            const row = table.insertRow(-1); // Append a row to the table
+
+                            Object.values(item).forEach(value => {
+                                const cell = row.insertCell(-1); // Append a cell to the row
+                                cell.appendChild(document.createTextNode(value)); // Set cell value
+                            });
+                        });
+                    })
+                    .catch(error => console.error('Error fetching JSON:', error));
+            }
+
+            // Call the function with the JSON file URL and table ID
+            loadJSONDataIntoTable('./table-data.json', 'myTable');
+
+
+        })
+          // Find the table
+    </script>
+
+</body>
+
+</html>

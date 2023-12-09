@@ -19,7 +19,7 @@ try {
     // echo "<select>";
     foreach ($use as $med){
         if ($med[3] > 0 ){
-            echo"<option value=\"".$med['1'] ."\n" .$med[2]."\">".$med['1'].$med[2]."</option>" ;
+            echo"<option value=\"".$med['1']."\n"  .$med[2]."\">".$med['1']."\n" .$med[2]."</option>" ;
         }
     }
     // echo "</select>";
