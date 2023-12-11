@@ -1,26 +1,66 @@
 [
   {
-    "name": "John",
-    "age": 25,
-    "surname": "Doe",
-    "tel": "john@example.com"
+    "jour": "2023-11-02",
+    "plage": "jour",
+    "Nommed": "john@example.com",
+    "Nomjour": "lundi",
+    "canProgram" : true
   },
   {
-    "name": "Jane",
-    "age": 30,
-    "surname": "dan",
-    "tel": "Jane@example.com"
+    "jour": "2023-11-02",
+    "plage": "soir",
+    "Nommed": "Jane@example.com",
+    "Nomjour": "lundi",
+    "canProgram" : false
   },
   {
-    "name": "foo",
-    "age": 3,
-    "surname": "Ronald",
-    "tel": "foo@example.com"
+    "jour": "2023-11-02",
+    "plage": "nuit",
+    "Nommed": "foo@example.com",
+    "Nomjour": "lundi",
+    "canProgram" : true
   },
   {
-    "name": "ron",
-    "age": 93,
-    "surname": "young",
-    "tel": "ron@example.com <br> "
+    "jour": "2023-11-03",
+    "plage": "jour",
+    "Nommed": "yannick@example.com",
+    "Nomjour": "mardi",
+    "canProgram" : false
+  },
+  {
+    "jour": "2023-11-09",
+    "plage": "soir",
+    "Nommed": "kamga@example.com",
+    "Nomjour": "Dimanche",
+    "canProgram" : true
+  },
+  {
+    "jour": "2023-11-03",
+    "plage": "nuit",
+    "Nommed": "paul@example.com",
+    "Nomjour": "mardi",
+    "canProgram" : true
+  },
+  {
+    "jour": "2023-11-04",
+    "plage": "jour",
+    "Nommed": "brian@example.com",
+    "Nomjour": "mercredi",
+    "canProgram" : false
+  },
+  {
+    "jour": "2023-11-04",
+    "plage": "soir",
+    "Nommed": "simo@example.com",
+    "Nomjour": "mercredi",
+    "canProgram" : true
+  },
+  {
+    "jour": "2023-11-04",
+    "plage": "nuit",
+    "Nommed": "steve@example.com",
+    "Nomjour": "mercredi",
+    "canProgram" : false
   }
+ 
 ]

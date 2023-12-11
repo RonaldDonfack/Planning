@@ -1,0 +1,8 @@
+il faut des id pour identifier chaqu'un des elements dans la bd en cas de tentative de modification ou de supresion ce qui pourra etre faire avec uuid 
+var uuid = require('node-uuid');
+
+
+le user interface doit avoir le formulaire pour recuperer la date de debut et la date de fin 
+
+Fonctionnalite de l'intrface 
+
